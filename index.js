@@ -19,9 +19,8 @@ client.once('ready', async c => {                                    // print lo
     channel.send('Bot is ready!');
   });
 
-/*
-client.on('ready', () => {
-    const channel = client.channels.cache.get('1154143913397977091');          // print message in the channel
+client.on('ready', async () => {
+    const channel = await client.channels.cache.get('1154143913397977091');          // print message in the channel
     channel.send('Hello, World!');
   });
 
@@ -29,7 +28,6 @@ client.on('ready', async () => {
     const user = await client.users.fetch('431803299038232577');               // print message to user messages
     user.send('Hello, World!');
   });
-*/
   
 client.on('ready', async () => {
     const guild = await client.guilds.cache.get(server_id);                     // print usernames in channel
